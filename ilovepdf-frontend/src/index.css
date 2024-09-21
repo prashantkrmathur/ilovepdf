@@ -1,15 +1,4 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-Link{
-  text-decoration: none;
-}
-:root{
-  /* --menuFont:3vw; */
-}
-/* :root {
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -76,71 +65,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-} */
-
-/* ********************************************* LOGIN SIGNUP CSS ***************************** */
- .login-signup{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  margin: auto;
- }
- .login-signup img{
-  margin-bottom: 1rem;
- }
- .login-signup>p:nth-child(2){
-  font-size:2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
- }
-.using-f-e-s{
-  display: flex;
 }
-.using-f-e-s p:nth-child(1),.using-f-e-s p:nth-child(2),.using-f-e-s p:nth-child(3){
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-.using-f-e-s p:nth-child(1){
-  background-color: blue;
-  color: white;
-
-}
-.using-f-e-s p{
-  margin-inline: 10px;
-
-}
-.login-signup a:nth-child(6),.login-signup a:nth-child(7){
-  margin-bottom: 1rem;
-  text-decoration: none;
-  color: orangered;
-  font-weight: 500;
-  font-size: 1.2rem;
-}
-.login-signup input:nth-child(5),.login-signup input:nth-child(4),.login-signup input:nth-child(6){
-  margin-bottom: 1rem;
-  width: 50%;
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: 10px;
-  /* border: none; */
-  outline: none;
-}
-.login-signup button:nth-child(7),.login-signup button:nth-child(8){
-  padding-inline: 1rem;
-  padding-block: 0.5rem;
-  background-color: orangered;
-  border: none;
-  color: white;
-  border-radius: 5px;
-  font-size: 20px;
-}
-.create-alreadyaccount{
-  display: flex;
-  margin-top: 1rem;
-}
-
-/* *************************************** LOGIN SIGNUP CSS END ************************************** */
