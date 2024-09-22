@@ -71,8 +71,7 @@ const Header = () => {
               className={`dropdown-item ${showAllToolsMenu ? 'active' : ''}`}
             >
               All PDF Tools <FaChevronDown className="dropdown-icon" />
-            </li>
-          </ul>
+            
           {showAllToolsMenu && ( // Render the dropdown only when hovering
             <div className="all-tools-dropdown">
               <div className="tools-section">
@@ -137,6 +136,8 @@ const Header = () => {
               </div>
             </div>
           )}
+          </li>
+          </ul>
         </div>
         <div className="action">
         <Link to='/login'> <p className='poppins-bold'>Login</p></Link>

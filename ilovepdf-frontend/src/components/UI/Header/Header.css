@@ -52,8 +52,10 @@ nav .logo img{
   /* Convert PDF Dropdown */
   .convert-dropdown {
     position: absolute;
-    top: 150%;
-    /* left: 0; */
+    top: 100%;
+    left: 0;
+    border-radius: 10px;
+    /* padding-top: 100px */
     width: max-content;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -102,10 +104,11 @@ nav .logo img{
   
   .all-tools-dropdown {
     position: absolute;
+    border-radius: 10px;
 
     top: 100%;
 
-    left: 5%;
+    left: -450%;
     /* transform: translate(-50%, -50%);  */
       width: 80vw; 
 margin: auto;
@@ -129,7 +132,7 @@ margin: auto;
   
   /* Other styles remain unchanged... */
   
-  @media (max-width: 600px) {
+  @media (max-width: 599px) {
     .all-tools-dropdown {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -138,6 +141,14 @@ margin: auto;
   @media (min-width: 600px) and (max-width: 1300px) {
     .all-tools-dropdown {
       grid-template-columns: repeat(4, 1fr);
+      /* left: -100%; */
+    }
+
+  }
+  @media (max-width: 1030px) {
+    .all-tools-dropdown {
+      grid-template-columns: repeat(2, 1fr);
+      left: -200%;
     }
 
   }
@@ -221,7 +232,7 @@ margin: auto;
     }
   }
   @media (max-width:1030px){
-    .main-menu li:nth-child(1),.main-menu li:nth-child(2),.main-menu li:nth-child(3),.main-menu li:nth-child(4){
+    .main-menu>li:nth-child(1),.main-menu>li:nth-child(2),.main-menu>li:nth-child(3){
         display: none;
     }
   }
