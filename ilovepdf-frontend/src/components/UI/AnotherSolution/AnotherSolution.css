@@ -1,0 +1,122 @@
+
+.block-container{
+    max-width: 80%;
+    margin: auto;
+    /* margin-block: 3rem; */
+
+}
+.block-body{
+    display: flex;
+    gap: 5rem;
+    padding-bottom: 10rem;
+}
+.block-container h1{
+    /* margin-top: 3rem;
+    margin-bottom: 1rem; */
+    margin-block: 5rem;
+    text-align: center;
+    font-size: 3rem;
+}
+.info-unit{
+    line-height: 1.5;
+}
+.info-title{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.info-body{
+    color: #47474F;
+}
+
+.block-header{
+    font-size: 1.4rem;
+    text-align: center;
+    width: 90%;
+    color: #47474F;
+
+    margin: auto;
+}
+.images{
+    display: flex;
+    justify-content: center;
+    padding-block: 5rem;
+    gap: 8rem;
+}
+.images img{
+    width: 50px;
+}
+.block-container p{
+    padding-bottom: 1rem;
+    padding-top: 5rem;
+    font-size: 3rem;
+font-weight: 600;
+    text-align: center;
+}
+.million-users{
+    background-color: rgb(245,245,250);
+}
+
+.premium{
+    display: flex;
+    gap: 2rem;
+    /* flex-wrap: wrap; */
+    background-color: #47474F;
+    color: white;
+    padding: 7rem;
+}
+.right{
+    align-self: center;
+}
+.left h1{
+    font-size: 3rem;
+}
+.premuimpara{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    width: 60%;
+    color: #e6e6e7;
+    font-weight: 100;
+}
+
+.left p:nth-child(3){
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    padding: 0.7rem;
+    background-color: rgb(255,194,51);
+    width: max-content;
+    color: black;
+    border-radius: 0.7rem;
+}
+
+@media (max-width:880px){
+    .block-body{
+        gap: 2rem;
+        flex-direction: column;
+    }
+    .info-body{
+        font-size: 1rem;
+    }
+    .images{
+        gap: 3rem;
+    }
+}
+
+@media (max-width:991px){
+    .premium{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 3rem;
+        
+    }
+    .right{
+        align-self: center;
+    }
+    .left p:nth-child(3){
+        margin-top: 1rem;
+    }
+    .premuimpara{
+        width: 80%;
+    }
+}

@@ -20,7 +20,7 @@ nav .logo img{
     width: 120px;
 }
 .pdf-tools-container {
-    padding: 20px;
+    padding: 10px;
   }
   
   .main-menu {
@@ -193,6 +193,10 @@ margin: auto;
   @media (max-width: 640px) {
     .action p {
       display: none; /* Hide the login/signup buttons on small screens */
+      /* background-color: transparent; */
+    }
+    .action a:nth-child(2){
+      background-color: transparent;
     }
     .profile-icon {
       display: block; /* Show profile icon on small screens */

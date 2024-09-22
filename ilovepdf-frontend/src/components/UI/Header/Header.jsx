@@ -14,11 +14,11 @@ const Header = () => {
   const handleAllToolsMouseEnter = () => setShowAllToolsMenu(true);
   const handleAllToolsMouseLeave = () => setShowAllToolsMenu(false);
  const handleProfileClick = () => {
-    navigate('/login'); // Redirect to the login page
+    navigate('/signup'); // Redirect to the login page
   };
   return (
     <header>
-      <nav>
+      <nav className='poppins-regular'>
         <div className="logo">
           <Link to='/'>
             <img src='https://www.ilovepdf.com/img/ilovepdf.svg' alt="iLovePDF Logo" />
@@ -139,8 +139,8 @@ const Header = () => {
           )}
         </div>
         <div className="action">
-        <Link to='/login'> <p>Login</p></Link>
-  <Link to='/signup'>Sign Up</Link>
+        <Link to='/login'> <p className='poppins-bold'>Login</p></Link>
+  <Link to='/signup'> <p className='poppins-bold'> Sign Up</p></Link>
   <div className="profile-icon" onClick={handleProfileClick}>
     <FaUserCircle size={24} />
   </div>
