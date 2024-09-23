@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",           // Add this line to set the base directory
+    "paths": {
+      "@/*": ["./src/*"]      // Add this line to set up import alias
+    }
+  },
+  "include": ["src/**/*"],     // Includes all files in the src directory
+  "exclude": ["node_modules", "dist"]
+}
