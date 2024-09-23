@@ -1,0 +1,37 @@
+.tool-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.tool-detail h1{
+    font-size: 3rem;
+    margin-top: 1.5rem;
+    color: #33333b;
+}
+.tool-detail p {
+    font-size: 22px;
+    color: #47474F;
+}
+.tool-para{
+    width: 60%;
+    text-align: center;
+}
+.select-pdf{
+    padding: 1.5rem 5rem;
+    border-radius: 20px;
+    margin-top: 3rem;
+    background-color: orangered;
+    
+}
+.select-pdf p{
+    color: white;
+    font-size: 24px;
+
+}
+@media(max-width:729px){
+    .tool-para{
+        width: 80%;
+        text-align: center;
+    }
+}

@@ -130,8 +130,7 @@ margin: auto;
     flex-direction: column;
   }
  
-  /* Other styles remain unchanged... */
-  
+ 
   @media (max-width: 599px) {
     .all-tools-dropdown {
       grid-template-columns: repeat(2, 1fr);
@@ -152,8 +151,6 @@ margin: auto;
     }
 
   }
-  
-  
   
   .tools-section {
     display: flex;
