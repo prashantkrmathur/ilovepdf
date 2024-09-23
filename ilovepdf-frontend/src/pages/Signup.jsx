@@ -4,7 +4,7 @@ import { Button } from '../components/UI/button' // assuming the shadcn button c
 import { Input } from '../components/UI/input'
 import { Label } from '../components/UI//label'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../components/UI/card'
-import { FaFacebook, FaGoogle } from 'react-icons/fa' // Facebook and Google icons
+import { FaFacebook, FaGoogle, FaUser, FaEnvelope, FaLock } from 'react-icons/fa' // Added FaUser, FaEnvelope, FaLock for icons
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const Signup = () => {
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
         <img src='https://www.ilovepdf.com/img/ilovepdf.svg' alt="iLovePDF Logo" width={200} className="mx-auto" />
-        <CardTitle className="text-center">Sign up for an Account</CardTitle>
+        <CardTitle className="text-center">Create a new account</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="flex justify-between space-x-2 mb-4">
@@ -36,27 +36,40 @@ const Signup = () => {
             SSO
           </Button>
         </div>
-        <div className="mt-6">
+
+        {/* Name Input with Icon */}
+        <div className="mt-6 relative">
           <Label htmlFor="name">Name</Label>
-          <Input id="name" type="text" placeholder="Enter your name" />
+          <div className="relative">
+            <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <Input id="name" type="text" placeholder="Enter your name" className="pl-10" />
+          </div>
         </div>
-        <div className="mt-3">
+
+        {/* Email Input with Icon */}
+        <div className="mt-3 relative">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" type="email" placeholder="Enter your email" />
+          <div className="relative">
+            <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <Input id="email" type="email" placeholder="Enter your email" className="pl-10" />
+          </div>
         </div>
-        <div className="mt-3">
+
+        {/* Password Input with Icon */}
+        <div className="mt-3 relative">
           <Label htmlFor="password">Password</Label>
-          <Input id="password" type="password" placeholder="Password" />
+          <div className="relative">
+            <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <Input id="password" type="password" placeholder="Password" className="pl-10" />
+          </div>
         </div>
-        <Link to='/forgotpassword' className="text-blue-600 hover:underline mt-2 block">
-          Forgot your Password?
-        </Link>
       </CardContent>
+
       <CardFooter className="flex flex-col space-y-3">
-        <Button>Sign Up</Button>
+        <Button variant={'destructive'}>Sign Up</Button>
         <div className="text-center">
-          <p>Already have an account?</p>
-          <Button variant="link" onClick={()=>navigate('/login')}>
+          <span>Already Member?</span>
+          <Button className="mr-2 text-red-500" variant="link" onClick={()=>navigate('/login')}>
             Log In
           </Button>
         </div>
