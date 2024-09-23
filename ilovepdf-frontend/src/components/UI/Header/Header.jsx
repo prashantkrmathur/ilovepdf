@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { FaChevronDown, FaUserCircle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
-import { Button } from "@/components/ui/button";
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuItem } from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { NavigationMenu } from '@radix-ui/react-navigation-menu';
+import { Button } from "../button";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuItem } from "../dropdown-menu";
+import { NavigationMenu } from '../navigation-menu';
 
 const Header = () => {
   const navigate = useNavigate();
