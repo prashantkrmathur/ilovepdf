@@ -1,151 +1,108 @@
 import React, { useState } from 'react';
-import './Header.css';
-import { FaChevronDown, FaUserCircle } from 'react-icons/fa'; // Import the profile icon
+import { FaChevronDown, FaUserCircle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
-import '../../../../src/index.css'
+import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+
 const Header = () => {
-  const [showConvertMenu, setShowConvertMenu] = useState(false);
-  const [showAllToolsMenu, setShowAllToolsMenu] = useState(false);
   const navigate = useNavigate();
 
-  const handleConvertMouseEnter = () => setShowConvertMenu(true);
-  const handleConvertMouseLeave = () => setShowConvertMenu(false);
-
-  const handleAllToolsMouseEnter = () => setShowAllToolsMenu(true);
-  const handleAllToolsMouseLeave = () => setShowAllToolsMenu(false);
- const handleProfileClick = () => {
-    navigate('/signup'); // Redirect to the login page
+  const handleProfileClick = () => {
+    navigate('/signup');
   };
+
   return (
     <header>
-      <nav className='poppins-regular'>
+      <nav className="flex justify-between items-center p-4 shadow-md bg-white">
+        {/* Logo */}
         <div className="logo">
-          <Link to='/'>
-            <img src='https://www.ilovepdf.com/img/ilovepdf.svg' alt="iLovePDF Logo" />
+          <Link to="/">
+            <img src="https://www.ilovepdf.com/img/ilovepdf.svg" alt="iLovePDF Logo" className="h-8" />
           </Link>
         </div>
 
-        <div className="pdf-tools-container">
-          <ul className="main-menu">
-            <li>Merge PDF</li>
-            <li>Split PDF</li>
-            <li>Compress PDF</li>
+        {/* PDF Tools Menu */}
+        <div className="flex space-x-6">
+          <Button variant="ghost">Merge PDF</Button>
+          <Button variant="ghost">Split PDF</Button>
+          <Button variant="ghost">Compress PDF</Button>
 
-            {/* Convert PDF menu with dropdown */}
-            <li
-              onMouseEnter={handleConvertMouseEnter}
-              onMouseLeave={handleConvertMouseLeave}
-              className={`dropdown-item ${showConvertMenu ? 'active' : ''}`}
-            >
-              Convert PDF <FaChevronDown className="dropdown-icon" />
-              {showConvertMenu && (
-                <div className="convert-dropdown">
-                  <div className="convert-section">
-                    <strong>Convert to PDF</strong>
-                    <ul>
-                      <li>JPG to PDF</li>
-                      <li>WORD to PDF</li>
-                      <li>POWERPOINT to PDF</li>
-                      <li>EXCEL to PDF</li>
-                      <li>HTML to PDF</li>
-                    </ul>
-                  </div>
-                  <div className="convert-section">
-                    <strong>Convert from PDF</strong>
-                    <ul>
-                      <li>PDF to JPG</li>
-                      <li>PDF to WORD</li>
-                      <li>PDF to POWERPOINT</li>
-                      <li>PDF to EXCEL</li>
-                      <li>PDF to PDF/A</li>
-                    </ul>
-                  </div>
-                </div>
-              )}
-            </li>
+          {/* Convert PDF Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="flex items-center">
+                Convert PDF <FaChevronDown className="ml-1" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>Convert to PDF</DropdownMenuLabel>
+              <DropdownMenuItem>JPG to PDF</DropdownMenuItem>
+              <DropdownMenuItem>WORD to PDF</DropdownMenuItem>
+              <DropdownMenuItem>POWERPOINT to PDF</DropdownMenuItem>
+              <DropdownMenuItem>EXCEL to PDF</DropdownMenuItem>
+              <DropdownMenuItem>HTML to PDF</DropdownMenuItem>
+              <DropdownMenuLabel>Convert from PDF</DropdownMenuLabel>
+              <DropdownMenuItem>PDF to JPG</DropdownMenuItem>
+              <DropdownMenuItem>PDF to WORD</DropdownMenuItem>
+              <DropdownMenuItem>PDF to POWERPOINT</DropdownMenuItem>
+              <DropdownMenuItem>PDF to EXCEL</DropdownMenuItem>
+              <DropdownMenuItem>PDF to PDF/A</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
 
-            {/* All PDF Tools menu with dropdown */}
-            <li
-              onMouseEnter={handleAllToolsMouseEnter}
-              onMouseLeave={handleAllToolsMouseLeave}
-              className={`dropdown-item ${showAllToolsMenu ? 'active' : ''}`}
-            >
-              All PDF Tools <FaChevronDown className="dropdown-icon" />
-            
-          {showAllToolsMenu && ( // Render the dropdown only when hovering
-            <div className="all-tools-dropdown">
-              <div className="tools-section">
-                <strong>ORGANIZE PDF</strong>
-                <ul>
-                  <li>Merge PDF</li>
-                  <li>Split PDF</li>
-                  <li>Remove pages</li>
-                  <li>Extract pages</li>
-                  <li>Organize PDF</li>
-                  <li>Scan to PDF</li>
-                </ul>
-              </div>
-              <div className="tools-section">
-                <strong>OPTIMIZE PDF</strong>
-                <ul>
-                  <li>Compress PDF</li>
-                  <li>Repair PDF</li>
-                  <li>OCR PDF</li>
-                </ul>
-              </div>
-              {/* Add more sections as needed */}
-              <div className="tools-section">
-                <strong>CONVERT TO PDF</strong>
-                <ul>
-                  <li>JPG to PDF</li>
-                  <li>WORD to PDF</li>
-                  <li>POWERPOINT to PDF</li>
-                  <li>EXCEL to PDF</li>
-                  <li>HTML to PDF</li>
-                </ul>
-              </div>
-              <div className="tools-section">
-                <strong>CONVERT FROM PDF</strong>
-                <ul>
-                  <li>PDF to JPG</li>
-                  <li>PDF to WORD</li>
-                  <li>PDF to POWERPOINT</li>
-                  <li>PDF to EXCEL</li>
-                  <li>PDF to PDF/A</li>
-                 
-                </ul>
-              </div>
-              <div className="tools-section">
-                <strong>EDIT PDF</strong>
-                <ul>
-                  <li>Rotate PDF</li>
-                  <li>Add page Numbers</li>
-                  <li>Add watermark</li>
-                  <li>Edit PDF</li>
-                </ul>
-              </div>
-              <div className="tools-section">
-                <strong>PDF Security</strong>
-                <ul>
-                  <li>Unlock PDF</li>
-                  <li>Protect PDF</li>
-                  <li>Sign PDF</li>
-                  <li>Redact PDF</li>
-                  <li>Compare PDF</li>
-                </ul>
-              </div>
-            </div>
-          )}
-          </li>
-          </ul>
+          {/* All PDF Tools Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="flex items-center">
+                All PDF Tools <FaChevronDown className="ml-1" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>Organize PDF</DropdownMenuLabel>
+              <DropdownMenuItem>Merge PDF</DropdownMenuItem>
+              <DropdownMenuItem>Split PDF</DropdownMenuItem>
+              <DropdownMenuItem>Remove pages</DropdownMenuItem>
+              <DropdownMenuItem>Extract pages</DropdownMenuItem>
+              <DropdownMenuItem>Organize PDF</DropdownMenuItem>
+              <DropdownMenuItem>Scan to PDF</DropdownMenuItem>
+
+              <DropdownMenuLabel>Optimize PDF</DropdownMenuLabel>
+              <DropdownMenuItem>Compress PDF</DropdownMenuItem>
+              <DropdownMenuItem>Repair PDF</DropdownMenuItem>
+              <DropdownMenuItem>OCR PDF</DropdownMenuItem>
+
+              <DropdownMenuLabel>Edit PDF</DropdownMenuLabel>
+              <DropdownMenuItem>Rotate PDF</DropdownMenuItem>
+              <DropdownMenuItem>Add page numbers</DropdownMenuItem>
+              <DropdownMenuItem>Add watermark</DropdownMenuItem>
+              <DropdownMenuItem>Edit PDF</DropdownMenuItem>
+
+              <DropdownMenuLabel>PDF Security</DropdownMenuLabel>
+              <DropdownMenuItem>Unlock PDF</DropdownMenuItem>
+              <DropdownMenuItem>Protect PDF</DropdownMenuItem>
+              <DropdownMenuItem>Sign PDF</DropdownMenuItem>
+              <DropdownMenuItem>Redact PDF</DropdownMenuItem>
+              <DropdownMenuItem>Compare PDF</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
-        <div className="action">
-        <Link to='/login'> <p className='poppins-bold'>Login</p></Link>
-  <Link to='/signup'> <p className='poppins-bold'> Sign Up</p></Link>
-  <div className="profile-icon" onClick={handleProfileClick}>
-    <FaUserCircle size={24} />
-  </div>
-</div>
+
+        {/* Action Buttons */}
+        <div className="flex items-center space-x-4">
+          <Link to="/login">
+            <Button variant="outline" className="poppins-bold">Login</Button>
+          </Link>
+          <Link to="/signup">
+            <Button variant="default" className="poppins-bold">Sign Up</Button>
+          </Link>
+
+          {/* Profile Icon */}
+          <Avatar onClick={handleProfileClick} className="cursor-pointer">
+            <FaUserCircle size={24} />
+            <AvatarFallback>PK</AvatarFallback>
+          </Avatar>
+        </div>
       </nav>
     </header>
   );
