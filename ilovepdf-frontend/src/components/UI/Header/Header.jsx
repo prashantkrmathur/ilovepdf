@@ -3,7 +3,7 @@ import { FaChevronDown, FaUserCircle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "../button";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuItem } from "../dropdown-menu";
-import { NavigationMenu } from '../navigation-menu';
+import { NavigationMenu } from '@radix-ui/react-navigation-menu';
 
 const Header = () => {
   const navigate = useNavigate();
