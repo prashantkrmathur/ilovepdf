@@ -1,29 +1,62 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from '../components/UI/button'
+import { Link, useNavigate } from 'react-router-dom'
+import { Button } from '../components/UI/button' // assuming the shadcn button component is imported like this
+import { Input } from '../components/UI/input'
+import { Label } from '../components/UI//label'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../components/UI/card'
+import { FaFacebook, FaGoogle } from 'react-icons/fa' // Facebook and Google icons
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
-    <>
-    <div className="login-signup">
-    <img src='https://www.ilovepdf.com/img/ilovepdf.svg' alt="iLovePDF Logo" width={200} />    
-        <p>Login to your Account</p>
-        <div >
-            <Button>Facebook</Button>
-            <Button>Instagram</Button>
-            <Button>SSO</Button>
+    <Card className="w-full max-w-md mx-auto">
+      <CardHeader>
+        <img src='https://www.ilovepdf.com/img/ilovepdf.svg' alt="iLovePDF Logo" width={200} className="mx-auto" />
+        <CardTitle className="text-center">Login to your Account</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="flex justify-between space-x-2">
+          <Button 
+            className="bg-[#4267B2] text-white hover:bg-[#365899]" // Facebook blue color
+            variant="solid"
+          >
+            <FaFacebook className="mr-2" /> Facebook
+          </Button>
+          <Button 
+            className="bg-white text-black border border-gray-300 hover:bg-gray-100" // Google white button
+            variant="outline"
+          >
+            <FaGoogle className="mr-2 text-red-500" /> Google
+          </Button>
+          <Button 
+            className="bg-gray-600 text-white hover:bg-gray-700" // SSO button
+            variant="solid"
+          >
+            SSO
+          </Button>
         </div>
-        <input type="text" placeholder='Enter your email' />
-        <input type="text" placeholder='Password' />
-        <Link to='/forgotpassword'>Forgot your Password?</Link>
-        <button>Login</button>
-        <div className="create-alreadyaccount">
-            <p>Don't have an accont?</p>
-            <Button variant={'destructive'} to='/signup'>Create an account?</Button>
+        <div className="mt-6">
+          <Label htmlFor="email">Email</Label>
+          <Input id="email" type="email" placeholder="Enter your email" />
         </div>
-    </div>
-    
-    </>
+        <div className="mt-3">
+          <Label htmlFor="password">Password</Label>
+          <Input id="password" type="password" placeholder="Password" />
+        </div>
+        <Link to='/forgotpassword' className="text-blue-600 hover:underline mt-2 block">
+          Forgot your Password?
+        </Link>
+      </CardContent>
+      <CardFooter className="flex flex-col space-y-3">
+        <Button>Login</Button>
+        <div className="text-center">
+          <p>Don't have an account?</p>
+          <Button variant="destructive"  onClick={() => navigate('/signup')}>
+            Create an account
+          </Button>
+        </div>
+      </CardFooter>
+    </Card>
   )
 }
 

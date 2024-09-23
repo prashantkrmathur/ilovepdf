@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { NavigationMenu } from '@radix-ui/react-navigation-menu';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="flex justify-between items-center p-4 shadow-md bg-white">
+      <NavigationMenu className="flex justify-between items-center p-4 shadow-md bg-white">
         {/* Logo */}
         <div className="logo">
           <Link to="/">
@@ -94,16 +95,16 @@ const Header = () => {
             <Button variant="outline" className="poppins-bold">Login</Button>
           </Link>
           <Link to="/signup">
-            <Button variant="default" className="poppins-bold">Sign Up</Button>
+            <Button variant="destructive" className="poppins-bold">Sign Up</Button>
           </Link>
 
-          {/* Profile Icon */}
+          {/* Profile Icon
           <Avatar onClick={handleProfileClick} className="cursor-pointer">
             <FaUserCircle size={24} />
             <AvatarFallback>PK</AvatarFallback>
-          </Avatar>
+          </Avatar> */}
         </div>
-      </nav>
+      </NavigationMenu>
     </header>
   );
 };
