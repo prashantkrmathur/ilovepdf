@@ -57,7 +57,7 @@ const Login = () => {
         </div>
 
         {/* Forgot Password Link */}
-        <Link to='/forgotpassword' className="text-blue-600 hover:underline mt-2 block">
+        <Link to='/forgotpassword' className="text-red-600 hover:underline mt-2 block">
           Forgot your Password?
         </Link>
       </CardContent>
