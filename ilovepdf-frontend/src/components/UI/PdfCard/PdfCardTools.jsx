@@ -1,7 +1,6 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../card';
 import { FaFilePdf } from 'react-icons/fa';  // Import PDF icon
-import pdfToolsData from '../../../Data/CardData.json';
 import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
