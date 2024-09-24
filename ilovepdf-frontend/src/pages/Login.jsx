@@ -64,7 +64,7 @@ const Login = () => {
 
       {/* Footer with Login Button and Sign Up Link */}
       <CardFooter className="flex flex-col space-y-3">
-        <Button>Login</Button>
+        <Button variant={'destructive'}>Login</Button>
         <div className="text-center">
           <span>Don't have an account?</span>
           <Button className="mr-2 text-red-500" variant="link" onClick={() => navigate('/signup')}>
