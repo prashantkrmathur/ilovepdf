@@ -1,11 +1,11 @@
 import React from 'react'
-import HeroSection from '../components/UI/HeroSection/HeroSection'
 import AnotherSolution from '../components/UI/AnotherSolution/AnotherSolution'
+import PdfCardTools from '../components/UI/PdfCard/PdfCardTools'
 
 const Home = () => {
   return (
     <>
-    <HeroSection/>
+    <PdfCardTools/>
     {/* Another Slution page */}
     <AnotherSolution/>
     </>

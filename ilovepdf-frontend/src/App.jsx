@@ -5,6 +5,7 @@ import ErrorPage from './pages/ErrorPage'
 import AppLayout from './components/Layout/AppLayout'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import MergePdf from './pages/MergePdf'
 const router = createBrowserRouter([
   {
     path:'/',
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
     path:'/signup',
     element:<Signup/>
   },
+  {
+    path:'/merge-pdf',
+    element:<MergePdf/>
+  }
  
 ])
 
