@@ -67,9 +67,10 @@ const MergePdfComponent = () => {
         </div>
 
         {/* Button with Dropbox and Google Drive Icons */}
-        <Button
+        <Button 
+          variant='destructive'
           onClick={handleMergeButton}
-          className="w-full max-w-md h-16 destructive flex justify-between items-center"
+          className="w-full max-w-md h-16  flex justify-between items-center"
         >
           <span className="text-lg">Merge PDF</span>
           <div className="flex space-x-2 items-center">
