@@ -4,7 +4,7 @@ import { Input } from "../components/UI/input";
 import { FaDropbox, FaGoogleDrive } from "react-icons/fa";
 import Header from "../components/UI/Header/Header";
 
-const MergePdfComponent = () => {
+const CompressPdfComponent = () => {
   const fileInputRef = useRef(null); // Ref for file input
 
   // Handle Merge Button Click
@@ -72,7 +72,7 @@ const MergePdfComponent = () => {
           onClick={handleMergeButton}
           className="w-full max-w-md h-16  flex justify-between items-center"
         >
-          <span className="text-lg">Merge PDF</span>
+          <span className="text-lg">Compress PDF</span>
           <div className="flex space-x-2 items-center">
             {/* Dropbox Icon */}
             <FaDropbox size={24} />
@@ -85,4 +85,4 @@ const MergePdfComponent = () => {
   );
 };
 
-export default MergePdfComponent;
+export default CompressPdfComponent;
