@@ -77,9 +77,9 @@ const PdfCardTool = () => {
     <div className="PdfCardTool py-8 bg-gray-50">
       {/* Hero Text */}
       <div className="hero-toptext text-center">
-        <h1 className='text-3xl font-bold leading-tight'>Every tool you need to work with PDFs in one place</h1>
+        <h1 className='text-3xl font-bold leading-tight mx-2'>Every tool you need to work with PDFs in one place</h1>
         <div className="para mt-4 mx-auto w-full md:w-2/3">
-          <p className="text-lg text-gray-600">All tools are 100% FREE and easy to use! Merge, split, compress, convert, rotate, unlock, and watermark PDFs with just a few clicks.</p>
+          <p className="text-lg text-gray-600 mx-2">All tools are 100% FREE and easy to use! Merge, split, compress, convert, rotate, unlock, and watermark PDFs with just a few clicks.</p>
         </div>
       </div>
 

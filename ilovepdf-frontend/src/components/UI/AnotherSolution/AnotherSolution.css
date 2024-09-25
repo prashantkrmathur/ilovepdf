@@ -107,7 +107,7 @@ font-weight: 600;
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        padding: 1rem;
+        padding: 3rem;
         
     }
     .right{
@@ -118,5 +118,13 @@ font-weight: 600;
     }
     .premuimpara{
         width: 80%;
+    }
+}
+@media (max-width:400px){
+    .premium{
+        padding: 1rem;
+    }
+    .right img{
+        width: 250px;
     }
 }
