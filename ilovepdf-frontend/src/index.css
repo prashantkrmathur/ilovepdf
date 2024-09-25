@@ -168,6 +168,52 @@ button:focus-visible {
 
 /* *************************************** LOGIN SIGNUP CSS END ************************************** */
 
+/* ***************FOOTER START******************* */
+
+.footer p{
+  color: red;
+  font-weight: bold;
+}
+.footer {
+  display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: space-evenly;
+flex-shrink: 1;
+margin-block: 3rem;
+}
+.footer ul li{
+  padding: 5px;
+}
+
+.row{
+  display: flex;
+  justify-content: end;
+  margin: 3rem;
+}
+@media (max-width:770px){
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    gap: 1rem;
+  }
+  
+}
+@media (max-width:400px){
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-items: flex-start;
+    /* margin-left: 2rem; */
+    gap: 1rem;
+  }
+
+}
+/* ***************FOOTER Ended******************* */
+
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;

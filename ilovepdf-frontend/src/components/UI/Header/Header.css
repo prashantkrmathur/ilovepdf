@@ -1,248 +1,271 @@
 header{
-    position: sticky;
-    top: 0;
-    top: 0;
-    z-index: 100; /* Ensures the header stays above other content */
-    background-color: white; /* Background color to avoid transparency when sticking */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+  position: sticky;
+  top: 0;
+  top: 0;
+  z-index: 100; /* Ensures the header stays above other content */
+  background-color: white; /* Background color to avoid transparency when sticking */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 nav{
-    display: grid;
-    grid-template-columns: 0.4fr 3fr 1fr;
-    /* height: 100vh;            Ensure nav takes full viewport height */
-    width: 90%;
-    margin: auto;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 0.4fr 3fr 1fr;
+  /* height: 100vh;            Ensure nav takes full viewport height */
+  width: 90%;
+  margin: auto;
+  align-items: center;
 }
 
 nav .logo img{
-    width: 120px;
+  width: 120px;
 }
 .pdf-tools-container {
-    padding: 10px;
-  }
-  
-  .main-menu {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .main-menu li {
-    position: relative;
-    padding: 10px;
-    /* background-color: #f1f1f1; */
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .main-menu li:hover {
-    background-color: #ddd;
-  }
-  
-  /* Dropdown Icon Style */
-  .dropdown-icon {
-    margin-left: 5px;
-    font-size: 12px;
-  }
-  
-  /* Convert PDF Dropdown */
-  .convert-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    border-radius: 10px;
-    /* padding-top: 100px */
-    width: max-content;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    display: flex;
-    
-    gap: 30px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-  }
-  
-  .convert-section {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .convert-section ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .convert-section ul li {
-    padding: 10px 0;
-    cursor: pointer;
-  }
-  
-  .convert-section ul li:hover {
-    color: #007bff;
-  }
-  
-  .convert-section strong {
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
+  padding: 10px;
+}
 
-  .dropdown-item.active .convert-dropdown {
-    /* background-color: #ddd; Highlight the active menu item */
-    display: flex;
-  }
-  
-  
-  .convert-dropdown {
-    display: none; /* Hide by default */
-  }
-  
-  
-  .all-tools-dropdown {
-    position: absolute;
-    border-radius: 10px;
+.main-menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
 
-    top: 100%;
+.main-menu li {
+  position: relative;
+  padding: 10px;
+  /* background-color: #f1f1f1; */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
 
-    left: -450%;
-    /* transform: translate(-50%, -50%);  */
-      width: 80vw; 
+.main-menu li:hover {
+  background-color: #ddd;
+}
+
+/* Dropdown Icon Style */
+.dropdown-icon {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+/* Convert PDF Dropdown */
+.convert-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 10px;
+  /* padding-top: 100px */
+  width: max-content;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  
+  gap: 30px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.convert-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.convert-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.convert-section ul li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.convert-section ul li:hover {
+  color: #007bff;
+}
+
+
+.convert-section strong {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.dropdown-item.active .convert-dropdown {
+  /* background-color: #ddd; Highlight the active menu item */
+  display: flex;
+}
+
+
+.convert-dropdown {
+  display: none; /* Hide by default */
+}
+.oneline{
+  display: flex;
+  align-items: center;
+}
+
+.all-tools-dropdown {
+  position: absolute;
+  border-radius: 10px;
+
+  top: 100%;
+
+  left: -450%;
+  /* transform: translate(-50%, -50%);  */
+    width: 80vw; 
 margin: auto;
 
-    background-color: #fff;
-    margin: auto;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); 
-    gap: 20px;
-    box-sizing: border-box;
-  }
-  
-  .tools-section {
-    display: flex;
-    flex-direction: column;
-  }
- 
-  /* Other styles remain unchanged... */
-  
-  @media (max-width: 599px) {
-    .all-tools-dropdown {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width: 600px) and (max-width: 1300px) {
-    .all-tools-dropdown {
-      grid-template-columns: repeat(4, 1fr);
-      /* left: -100%; */
-    }
+  background-color: #fff;
+  margin: auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  gap: 20px;
+  box-sizing: border-box;
+}
 
-  }
-  @media (max-width: 1030px) {
-    .all-tools-dropdown {
-      grid-template-columns: repeat(2, 1fr);
-      left: -100%;
-    }
+.tools-section {
+  display: flex;
+  flex-direction: column;
+}
 
-  }
-  
-  
-  
-  .tools-section {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .tools-section ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .tools-section ul li {
-    padding: 10px 0;
-    cursor: pointer;
 
+@media (max-width: 599px) {
+  .all-tools-dropdown {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .tools-section ul li:hover {
-    color: #007bff;
-  }
-  
-  .tools-section strong {
-    margin-bottom: 10px;
-    font-weight: bold;
+}
+
+@media (min-width: 600px) and (max-width: 1300px) {
+  .all-tools-dropdown {
+    grid-template-columns: repeat(4, 1fr);
+    /* left: -100%; */
   }
 
-  .action{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .action a{
-    text-decoration: none;
 
+}
+@media (max-width: 1030px) {
+  .all-tools-dropdown {
+    grid-template-columns: repeat(2, 1fr);
+    left: -100%;
+  }
+
+}
+
+.tools-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.tools-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tools-section ul li {
+  padding: 10px 0;
+  cursor: pointer;
+
+}
+
+.tools-section ul li:hover {
+  color: #007bff;
+}
+
+.tools-section strong {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.action{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.action a{
+  text-decoration: none;
+
+}
+.action a:nth-child(2){
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgb(225, 21, 21);
+}
+
+.profile-icon {
+  cursor: pointer;
+  display: none; /* Hide by default */
+}
+
+@media (max-width: 640px) {
+  .action p {
+    display: none; /* Hide the login/signup buttons on small screens */
+    /* background-color: transparent; */
   }
   .action a:nth-child(2){
-    margin-left: 10px;
-    padding: 5px;
-    border-radius: 10px;
-    color: white;
-    background-color: rgb(225, 21, 21);
+    background-color: transparent;
   }
-  
   .profile-icon {
-    cursor: pointer;
-    display: none; /* Hide by default */
+    display: block; /* Show profile icon on small screens */
   }
-  
-  @media (max-width: 640px) {
-    .action p {
-      display: none; /* Hide the login/signup buttons on small screens */
-      /* background-color: transparent; */
-    }
-    .action a:nth-child(2){
-      background-color: transparent;
-    }
-    .profile-icon {
-      display: block; /* Show profile icon on small screens */
-    }
+}
+
+@media (min-width: 641px) {
+  .action p {
+    display: block; /* Show login/signup buttons on larger screens */
   }
-  
-  @media (min-width: 641px) {
-    .action p {
-      display: block; /* Show login/signup buttons on larger screens */
-    }
-    .profile-icon {
-      display: none; /* Hide profile icon on larger screens */
-    }
+  .profile-icon {
+    display: none; /* Hide profile icon on larger screens */
   }
-  @media (max-width: 640px) {
-    .all-tools-dropdown { 
-        grid-template-columns: repeat(2, 1fr);
-         
+}
+@media (max-width: 640px) {
+  .all-tools-dropdown { 
+      grid-template-columns: repeat(2, 1fr);
+      left: -20%;
     }
     .main-menu li{
-        font-size: 2vw;
-    }
+    font-size: 10px;
   }
-  @media (max-width:1030px){
-    .main-menu>li:nth-child(1),.main-menu>li:nth-child(2),.main-menu>li:nth-child(3),.main-menu>li:nth-child(4){
-        display: none;
-    }
+  .tools-section ul li{
+    padding-block: 5px;
   }
-  @media (min-width: 600px) and (max-width: 1300px) {
-    .all-tools-dropdown { grid-template-columns: repeat(3, 1fr); 
-    
-    }
-    .main-menu li{
-        font-size: 1.3vw;
-    }
+}
+@media (max-width:1030px){
+  .main-menu>li:nth-child(1),.main-menu>li:nth-child(2),.main-menu>li:nth-child(3),.main-menu>li:nth-child(4){
+      display: none;
   }
-   
+}
+@media (min-width: 600px) and (max-width: 1300px) {
+  .all-tools-dropdown { grid-template-columns: repeat(3, 1fr); 
+  /* left: -20%; */
+  }
+  
+}
+@media (min-width: 599px) and (max-width: 900px) {
+  .all-tools-dropdown { grid-template-columns: repeat(3, 1fr); 
+  left: -20%;
+  }
+  
+}
+ 
+@media (max-width:1130px){
+  .main-menu span{
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 350px) {
+  .all-tools-dropdown {
+    grid-template-columns: 1fr; /* Stack items in a single column */
+    max-height: 80vh; /* Set the maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Adjust padding */
+    left: -10%; /* Adjust positioning if necessary */
+  }
+}
