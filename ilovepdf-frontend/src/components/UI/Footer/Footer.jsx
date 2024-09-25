@@ -34,6 +34,10 @@ const Footer = () => {
           <li>Contact</li>
         </ul>
       </div>
+      <hr />
+      <div className="row">
+        <p>© iLovePDF 2024 ® - Your PDF Editor</p>
+      </div>
     </>
   )
 }
