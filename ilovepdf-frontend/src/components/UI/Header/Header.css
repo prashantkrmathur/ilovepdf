@@ -238,8 +238,6 @@ margin: auto;
     .all-tools-dropdown { grid-template-columns: repeat(3, 1fr); 
     
     }
-    .main-menu li{
-        font-size: 1.3vw;
-    }
+    
   }
    
